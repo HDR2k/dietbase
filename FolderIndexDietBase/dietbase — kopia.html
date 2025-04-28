@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietBase - Twoja Baza Wiedzy Dietetycznej</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">DietBase</div>
+            <ul>
+                <li><a href="#home">Strona główna</a></li>
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#meal-database">Baza posiłków</a></li>
+                <li><a href="#meal-schedule">Twój jadłospis</a></li>
+                <li><a href="#dietopedia">Dietopedia</a></li>
+                <li><a href="#calculators">Kalkulatory</a></li>
+                <li><a href="#login">Zaloguj się</a></li>
+                <li><a href="#register">Zarejestruj się</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Witaj w DietBase</h1>
+            <p>Twoja kompleksowa baza wiedzy dietetycznej i narzędzi do zarządzania zdrowiem</p>
+            <button class="cta-button">Rozpocznij teraz</button>
+        </section>
+
+        <section id="features">
+            <h2>Główne funkcje</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Planowanie diety</h3>
+                    <p>Twórz i zarządzaj swoimi planami dietetycznymi</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Śledzenie postępów</h3>
+                    <p>Monitoruj swoje cele i osiągnięcia</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Wsparcie AI</h3>
+                    <p>Otrzymuj spersonalizowane rekomendacje</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>O nas</h2>
+            <div class="about-content">
+                <p class="about-main">💚 Jesteśmy dietetykami, którzy rozumieją Ciebie.</p>
+                <p class="about-description">Z nami dieta nie oznacza wyrzeczeń.<br>To styl życia, który pokochasz — dopasowany do Twoich potrzeb, zdrowia i ulubionych smaków.</p>
+                
+                <div class="about-features">
+                    <p class="feature-title">📋 Masz alergie? Choroby przewlekłe? Mało czasu na gotowanie?</p>
+                    <p class="feature-text">Nie szkodzi — nasz system to uwzględnia.</p>
+                </div>
+
+                <div class="about-network">
+                    <p class="network-title">🧠 Zewnętrzna sieć dietetyków pomaga nam stale ulepszać rozwiązania, które oddajemy w Twoje ręce.</p>
+                    <p class="network-text">Bo każdy pacjent zasługuje na opiekę dopasowaną dokładnie do niego.</p>
+                </div>
+
+                <div class="about-benefits">
+                    <p class="benefits-title">🌿 U nas:</p>
+                    <ul class="benefits-list">
+                        <li>✅ Jesz to, co lubisz</li>
+                        <li>✅ Wiesz, że robisz dobrze dla swojego zdrowia</li>
+                        <li>✅ Masz kontrolę — my wspieramy</li>
+                    </ul>
+                </div>
+
+                <p class="about-slogan">Nie musisz znać się na dietetyce. Wystarczy, że znasz siebie.</p>
+            </div>
+        </section>
+
+        <section id="dietopedia" class="dietopedia-section">
+            <h2>Dietopedia</h2>
+            <div class="dietopedia-content">
+                <div class="dietopedia-grid">
+                    <div class="dietopedia-card">
+                        <h3>Podstawy żywienia</h3>
+                        <ul>
+                            <li>Makroskładniki</li>
+                            <li>Witaminy i minerały</li>
+                            <li>Błonnik pokarmowy</li>
+                            <li>Woda i nawodnienie</li>
+                        </ul>
+                    </div>
+                    <div class="dietopedia-card">
+                        <h3>Diety specjalne</h3>
+                        <ul>
+                            <li>Dieta wegetariańska</li>
+                            <li>Dieta wegańska</li>
+                            <li>Dieta bezglutenowa</li>
+                            <li>Dieta ketogeniczna</li>
+                        </ul>
+                    </div>
+                    <div class="dietopedia-card">
+                        <h3>Choroby i dieta</h3>
+                        <ul>
+                            <li>Cukrzyca</li>
+                            <li>Nadciśnienie</li>
+                            <li>Choroby tarczycy</li>
+                            <li>Choroby jelit</li>
+                        </ul>
+                    </div>
+                    <div class="dietopedia-card">
+                        <h3>Żywienie w różnych okresach życia</h3>
+                        <ul>
+                            <li>Dzieci i młodzież</li>
+                            <li>Kobiety w ciąży</li>
+                            <li>Osoby starsze</li>
+                            <li>Sportowcy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculators" class="calculators-section">
+            <h2>Kalkulatory</h2>
+            <div class="calculators-container">
+                <!-- Kalkulator BMI -->
+                <div class="calculator-card">
+                    <h3>Kalkulator BMI</h3>
+                    <form id="bmiForm" class="calculator-form">
+                        <div class="form-group">
+                            <label for="bmiWeight">Waga (kg)</label>
+                            <input type="number" id="bmiWeight" step="0.1" min="30" max="300" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bmiHeight">Wzrost (cm)</label>
+                            <input type="number" id="bmiHeight" step="1" min="120" max="250" required>
+                        </div>
+                        <button type="submit" class="calculate-button">Oblicz BMI</button>
+                    </form>
+                    <div class="result-container" id="bmiResult">
+                        <div class="result-value">
+                            <span class="value">--</span>
+                            <span class="unit">BMI</span>
+                        </div>
+                        <p class="result-text">Wprowadź dane aby zobaczyć wynik</p>
+                    </div>
+                </div>
+
+                <!-- Kalkulator BMR -->
+                <div class="calculator-card">
+                    <h3>Kalkulator BMR (Podstawowa Przemiana Materii)</h3>
+                    <form id="bmrForm" class="calculator-form">
+                        <div class="form-group">
+                            <label for="bmrGender">Płeć</label>
+                            <select id="bmrGender" required>
+                                <option value="female">Kobieta</option>
+                                <option value="male">Mężczyzna</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bmrAge">Wiek</label>
+                            <input type="number" id="bmrAge" min="15" max="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bmrWeight">Waga (kg)</label>
+                            <input type="number" id="bmrWeight" step="0.1" min="30" max="300" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bmrHeight">Wzrost (cm)</label>
+                            <input type="number" id="bmrHeight" step="1" min="120" max="250" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bmrActivity">Poziom aktywności</label>
+                            <select id="bmrActivity" required>
+                                <option value="1.2">Siedzący tryb życia (brak ćwiczeń)</option>
+                                <option value="1.375">Lekka aktywność (1-3 dni w tygodniu)</option>
+                                <option value="1.55">Umiarkowana aktywność (3-5 dni w tygodniu)</option>
+                                <option value="1.725">Wysoka aktywność (6-7 dni w tygodniu)</option>
+                                <option value="1.9">Bardzo wysoka aktywność (sportowiec)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bmrGoal">Twój cel</label>
+                            <select id="bmrGoal" required>
+                                <option value="reduction">Chcę schudnąć</option>
+                                <option value="maintenance">Chcę zachować masę ciała</option>
+                                <option value="bulk">Chcę przytyć</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="calculate-button">Oblicz zapotrzebowanie</button>
+                    </form>
+                    <div class="result-container" id="bmrResult">
+                        <div class="bmr-results">
+                            <div class="result-box">
+                                <h4>BMR (podstawowa przemiana materii)</h4>
+                                <div class="result-value">
+                                    <span class="value">--</span>
+                                    <span class="unit">kcal</span>
+                                </div>
+                            </div>
+                            <div class="result-box">
+                                <h4>Dzienne zapotrzebowanie kaloryczne</h4>
+                                <div class="result-value">
+                                    <span class="value">--</span>
+                                    <span class="unit">kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goal-results">
+                            <h4>Twój cel:</h4>
+                            <div class="goal-box">
+                                <span class="goal-label">Zapotrzebowanie kaloryczne</span>
+                                <span class="goal-value">--</span>
+                                <span class="goal-description">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="meal-planner" class="planner-section">
+            <h2>Personalizacja jadłospisu</h2>
+            <div class="filters-panel">
+                <div class="filter-group">
+                    <h3>Choroby</h3>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="diabetes"> Cukrzyca typu 1 i 2
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="hypertension"> Nadciśnienie tętnicze
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="heart-disease"> Choroba wieńcowa / miażdżyca
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="heart-failure"> Niewydolność serca
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="obesity"> Otyłość / zespół metaboliczny
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="kidney-disease"> Choroby nerek
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="liver-disease"> Choroby wątroby
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="celiac"> Celiakia
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="hashimoto"> Hashimoto / niedoczynność tarczycy
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="gout"> Dna moczanowa
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="ibs"> Zespół jelita drażliwego (IBS)
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="gerd"> Refluks / GERD
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="cancer"> Nowotwory
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="anemia"> Anemia
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="lipid-disorders"> Zaburzenia lipidowe
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="pcos"> PCOS
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <h3>Alergie i nietolerancje</h3>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="lactose-intolerance"> Nietolerancja laktozy
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="milk-allergy"> Alergia na białko mleka krowiego
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="egg-allergy"> Alergia na jaja
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="nut-allergy"> Alergia na orzechy
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="gluten-allergy"> Alergia na gluten/pszenicę
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="seafood-allergy"> Alergia na owoce morza
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="soy-allergy"> Alergia na soję
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="fish-allergy"> Alergia na ryby
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="fructose-intolerance"> Fruktozemia
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="histamine-intolerance"> Histaminowa nietolerancja (HIT)
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <h3>Czas przygotowania</h3>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="quick"> Szybkie (do 5 min)
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="medium"> Średnie (6-30 min)
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" data-filter="long"> Długie (powyżej 30 min)
+                    </label>
+                </div>
+            </div>
+            <div class="planner-container">
+                <div class="meals-list">
+                    <h3>Dostępne posiłki</h3>
+                    <div class="meal-items">
+                        <div class="meal-item" draggable="true" data-meal-id="A001" data-restrictions="3plus" data-time="25">
+                            <div class="meal-header">
+                                <h4>Drób</h4>
+                                <div class="meal-icons">
+                                    <span class="time-icon" data-time="medium">⏰</span>
+                                </div>
+                            </div>
+                            <p>Danie drobiowe</p>
+                            <div class="meal-nutrients">
+                                <span class="meal-calories">535 kcal</span>
+                                <div class="macros">
+                                    <span class="protein">B: 63g</span>
+                                    <span class="carbs">W: 11g</span>
+                                    <span class="fat">T: 26g</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="meal-item" draggable="true" data-meal-id="A002" data-restrictions="2plus" data-time="35">
+                            <div class="meal-header">
+                                <h4>Sałatka</h4>
+                                <div class="meal-icons">
+                                    <span class="time-icon" data-time="long">🐢</span>
+                                </div>
+                            </div>
+                            <p>Sałatka warzywna</p>
+                            <div class="meal-nutrients">
+                                <span class="meal-calories">360 kcal</span>
+                                <div class="macros">
+                                    <span class="protein">B: 18g</span>
+                                    <span class="carbs">W: 36g</span>
+                                    <span class="fat">T: 14g</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="meal-item" draggable="true" data-meal-id="A051" data-restrictions="lactose-free" data-time="15">
+                            <div class="meal-header">
+                                <h4>Makaron</h4>
+                                <div class="meal-icons">
+                                    <span class="time-icon" data-time="medium">⏰</span>
+                                </div>
+                            </div>
+                            <p>Makaron bez laktozy</p>
+                            <div class="meal-nutrients">
+                                <span class="meal-calories">600 kcal</span>
+                                <div class="macros">
+                                    <span class="protein">B: 16g</span>
+                                    <span class="carbs">W: 95g</span>
+                                    <span class="fat">T: 16g</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="meal-item" draggable="true" data-meal-id="A013" data-restrictions="gluten-free" data-time="10">
+                            <div class="meal-header">
+                                <h4>Owsianka</h4>
+                                <div class="meal-icons">
+                                    <span class="time-icon" data-time="medium">⏰</span>
+                                </div>
+                            </div>
+                            <p>Owsianka bezglutenowa</p>
+                            <div class="meal-nutrients">
+                                <span class="meal-calories">489 kcal</span>
+                                <div class="macros">
+                                    <span class="protein">B: 16g</span>
+                                    <span class="carbs">W: 60g</span>
+                                    <span class="fat">T: 20g</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="meal-item" draggable="true" data-meal-id="A061" data-restrictions="lactose-free" data-time="5">
+                            <div class="meal-header">
+                                <h4>Pieczywo</h4>
+                                <div class="meal-icons">
+                                    <span class="time-icon" data-time="quick">🐰</span>
+                                </div>
+                            </div>
+                            <p>Kanapka bez laktozy</p>
+                            <div class="meal-nutrients">
+                                <span class="meal-calories">615 kcal</span>
+                                <div class="macros">
+                                    <span class="protein">B: 28g</span>
+                                    <span class="carbs">W: 71g</span>
+                                    <span class="fat">T: 21g</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="meal-item" draggable="true" data-meal-id="A038" data-restrictions="gluten-free" data-time="5">
+                            <div class="meal-header">
+                                <h4>Pieczywo</h4>
+                                <div class="meal-icons">
+                                    <span class="time-icon" data-time="quick">🐰</span>
+                                </div>
+                            </div>
+                            <p>Kanapka bezglutenowa</p>
+                            <div class="meal-nutrients">
+                                <span class="meal-calories">490 kcal</span>
+                                <div class="macros">
+                                    <span class="protein">B: 25g</span>
+                                    <span class="carbs">W: 55g</span>
+                                    <span class="fat">T: 17g</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="meal-schedule" id="meal-schedule">
+                    <h3>Twój jadłospis</h3>
+                    
+                    <div class="meals-per-day-control">
+                        <label for="mealsPerDay">Liczba posiłków dziennie:</label>
+                        <select id="mealsPerDay">
+                            <option value="1">1 posiłek</option>
+                            <option value="2">2 posiłki</option>
+                            <option value="3" selected>3 posiłki</option>
+                            <option value="4">4 posiłki</option>
+                            <option value="5">5 posiłków</option>
+                            <option value="6">6 posiłków</option>
+                        </select>
+                    </div>
+                    
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Poniedziałek</th>
+                                <th>Wtorek</th>
+                                <th>Środa</th>
+                                <th>Czwartek</th>
+                                <th>Piątek</th>
+                                <th>Sobota</th>
+                                <th>Niedziela</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scheduleBody">
+                            <!-- Wiersze będą generowane dynamicznie przez JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="meal-database" class="meal-database-section">
+            <h2>Baza posiłków</h2>
+            <div class="meal-database-content">
+                <div class="database-filters">
+                    <div class="filter-group">
+                        <h3>Kategorie posiłków</h3>
+                        <div class="filter-options">
+                            <button class="filter-button active" data-category="all">Wszystkie</button>
+                            <button class="filter-button" data-category="breakfast">Śniadania</button>
+                            <button class="filter-button" data-category="lunch">Obiady</button>
+                            <button class="filter-button" data-category="dinner">Kolacje</button>
+                            <button class="filter-button" data-category="snacks">Przekąski</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="database-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Posiłków</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Kategorii</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Ograniczeń dietetycznych</span>
+                    </div>
+                </div>
+                <div class="database-grid">
+                    <div class="database-card">
+                        <div class="card-header">
+                            <h3>Drób</h3>
+                            <span class="time-icon" data-time="medium">⏰</span>
+                        </div>
+                        <div class="card-content">
+                            <p class="meal-description">Danie drobiowe</p>
+                            <div class="meal-nutrients">
+                                <span class="meal-calories">535 kcal</span>
+                                <div class="macros">
+                                    <span class="protein">B: 63g</span>
+                                    <span class="carbs">W: 11g</span>
+                                    <span class="fat">T: 26g</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Więcej kart z posiłkami -->
+                </div>
+            </div>
+        </section>
+
+        <section id="login" class="auth-section">
+            <div class="auth-container">
+                <h2>Logowanie</h2>
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Hasło</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="auth-button">Zaloguj się</button>
+                </form>
+                <p class="auth-switch">Nie masz konta? <a href="#register">Zarejestruj się</a></p>
+            </div>
+        </section>
+
+        <section id="register" class="auth-section">
+            <div class="auth-container">
+                <h2>Rejestracja</h2>
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="registerName">Imię i nazwisko</label>
+                        <input type="text" id="registerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Hasło</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerType">Typ konta</label>
+                        <select id="registerType" required>
+                            <option value="patient">Pacjent</option>
+                            <option value="dietitian">Dietetyk</option>
+                        </select>
+                    </div>
+
+                    <!-- Sekcja preferencji i ograniczeń (widoczna tylko dla pacjentów) -->
+                    <div id="patientPreferences" class="preferences-section" style="display: none;">
+                        <h3>Preferencje i ograniczenia dietetyczne</h3>
+                        
+                        <!-- Preferowane posiłki -->
+                        <div class="form-group">
+                            <label>Ulubione posiłki</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferredMeals" value="breakfast">
+                                    Śniadania
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferredMeals" value="lunch">
+                                    Obiady
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferredMeals" value="dinner">
+                                    Kolacje
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferredMeals" value="snacks">
+                                    Przekąski
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Ograniczenia dietetyczne -->
+                        <div class="form-group">
+                            <label>Ograniczenia dietetyczne</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="dietaryRestrictions" value="vegetarian">
+                                    Wegetariańskie
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="dietaryRestrictions" value="vegan">
+                                    Wegańskie
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="dietaryRestrictions" value="glutenFree">
+                                    Bezglutenowe
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="dietaryRestrictions" value="lactoseFree">
+                                    Bez laktozy
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Choroby i schorzenia -->
+                        <div class="form-group">
+                            <label>Choroby i schorzenia</label>
+                            <div class="list-container">
+                                <div class="list-item">
+                                    <input type="checkbox" name="conditions" value="anemia">
+                                    <span>Anemia</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="conditions" value="celiac">
+                                    <span>Celiakia</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="conditions" value="thyroid">
+                                    <span>Choroby tarczycy</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="conditions" value="diabetes">
+                                    <span>Cukrzyca</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="conditions" value="hypertension">
+                                    <span>Nadciśnienie</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="conditions" value="pcos">
+                                    <span>PCOS</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="conditions" value="gerd">
+                                    <span>Refluks / GERD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Alergie i nietolerancje -->
+                        <div class="form-group">
+                            <label>Alergie i nietolerancje</label>
+                            <div class="list-container">
+                                <div class="list-item">
+                                    <input type="checkbox" name="allergies" value="gluten">
+                                    <span>Alergia na gluten/pszenicę</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="allergies" value="eggs">
+                                    <span>Alergia na jaja</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="allergies" value="nuts">
+                                    <span>Alergia na orzechy</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="allergies" value="seafood">
+                                    <span>Alergia na owoce morza</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="allergies" value="fish">
+                                    <span>Alergia na ryby</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="allergies" value="soy">
+                                    <span>Alergia na soję</span>
+                                </div>
+                                <div class="list-item">
+                                    <input type="checkbox" name="allergies" value="lactose">
+                                    <span>Nietolerancja laktozy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dodatkowe uwagi -->
+                        <div class="form-group">
+                            <label for="additionalNotes">Dodatkowe uwagi</label>
+                            <textarea id="additionalNotes" rows="3" placeholder="Dodatkowe informacje o preferencjach lub ograniczeniach"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="auth-button">Zarejestruj się</button>
+                </form>
+                <p class="auth-switch">Masz już konto? <a href="#login">Zaloguj się</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DietBase. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
